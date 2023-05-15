@@ -25,7 +25,6 @@ def index():
     return 'Bienvenidos al Proyecto fastAPI'
 
 
-
 @app.get('/peliculas_mes/{mes}')
 def peliculas_mes(mes:str):
     df = pd.read_csv('data_movies.csv')
