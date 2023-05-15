@@ -56,7 +56,9 @@ Crear 6 funciones que se consumirán en la API.
 
 * _def retorno(pelicula): '''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''' return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}_
 
-3. **[DEPLOYMENT](https://deploy-movies.onrender.com)**
+3. **[DEPLOYMENT](https://deploy-movies.onrender.com/docs)**
+
+* Para el deployment se realizo en Render.
 
 
 4. **[EDA](https://github.com/Luzve/PI_ML_OPS_LABS/blob/main/eda.ipynb)**
