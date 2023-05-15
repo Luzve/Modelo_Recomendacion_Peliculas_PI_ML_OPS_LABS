@@ -36,7 +36,7 @@ def peliculas_mes(mes:str):
     
 
 
-@app.get('/peliculas_dis/{dis}')
+@app.get('/peliculas_dia/{dia}')
 def peliculas_dia(dia:str):
     dia = dia.capitalize()
     cantidad = len(df.loc[df['weekday'] == dia, 'title'])
@@ -69,11 +69,10 @@ def peliculas_pais(pais):
 
 
 @app.get('/productoras/{productora}')
-def productoras(productora:str):
-    prod = df[['production_companies', 'budget', 'revenue']].dropna()
-    prod ['production_companies'] = prod['production_companies'].map(str.lower)
-    cantidad = prod.shape[0]
-    gtotal= (prod['revenue'] - prod['budget']).sum()
+def productoras(productora):
+    prod = df[df['production_companies'].apply(lambda x: productora in x)]
+    cantidad = len(prod['title'])
+    gtotal= prod['revenue'].sum()
     return {'productora':productora, 'ganancia_total': gtotal, 'cantidad': cantidad }
 
 
