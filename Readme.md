@@ -1,5 +1,9 @@
 <h1 align="center"><strong>MODELO DE RECOMENDACIÓN DE PELÍCULAS</strong></h1>
 
+<p align="center">
+<img src="src\movies.jpg"  height=300>
+</p>
+
 <h2><strong>DESCRIPCIÓN: </strong></h2>
 
 _En este modelo de ML, se resuelve un problema creando un sistema de recomendación de películas a una star-up, que provee servicios de agregación de plataformas de streaming._
@@ -18,7 +22,7 @@ _También ordena según el score de similaridad y devuelve una lista con valores
 
 <h2><strong>COMPILACIÓN: </strong></h2>
 
-1. **[ETL](https://github.com/Luzve/11-05-23/blob/main/etl%20(1).ipynb)** 
+1. **[ETL](https://github.com/Luzve/PI_ML_OPS_LABS/blob/main/etl.ipynb)** 
 
 * _belongs_to_collection, production_companies y otros, deberán desanidarlos para poder acceder a los datos y unirlos al dataset para luego hacer una consulta en la API._
 
@@ -31,13 +35,13 @@ _También ordena según el score de similaridad y devuelve una lista con valores
 * _Eliminar columnas video,imdb_id,adult,original_title,vote_count,poster_path y homepage._
 
 
-2. **[API](https://github.com/Luzve/11-05-23/blob/main/main.py)**
+2. **[API](http://127.0.0.1:8000/docs)**
 
 * Uso de framework FastAPI.
 
 * Render para el deploy del proyecto.
 
-* **Endpoints.**
+* **[Endpoints.](https://github.com/Luzve/PI_ML_OPS_LABS/blob/main/main.py)**
 Crear 6 funciones que se consumirán en la API.
 
 * _def peliculas_mes(mes): '''Se ingresa el mes y la funcion retorna la cantidad de peliculas que se estrenaron ese mes (nombre del mes, en str, ejemplo 'enero') historicamente''' return {'mes':mes, 'cantidad':respuesta}_
@@ -52,26 +56,12 @@ Crear 6 funciones que se consumirán en la API.
 
 * _def retorno(pelicula): '''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''' return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}_
 
-3. **[DEPLOYMENT]()**
+3. **[DEPLOYMENT](https://deploy-movies.onrender.com)**
 
 
-4. **[EDA]()**
+4. **[EDA](https://github.com/Luzve/PI_ML_OPS_LABS/blob/main/eda.ipynb)**
 
-Se realizaron las tareas de MVP requeridas:
-Se analizaron los dataframes (títulos y scores/ratings) en su estructura, forma, información, valores nulos, valores duplicados, etc.
-Se utilizó Pandas Profile Report para efectuar un análisis más profundo del archivo de títulos (películas y series).
-Se realizó un histograma con Matplotlib y Seaborn para obtener una visión general de distribución de los datos del dataframe de películas y series.
-
-4. Etapa del Sistema de Recomendación ➡️
-Archivo principal: m_recomendacion.ipynb
-
-Para lograr el MVP de esta etapa, se utilizó la librería Surprise, basados en el algoritmo SVD
-Luego se utilizó la biblioteca Gradio para obtener una interfase gráfica del Sistema de Recomendación. A continuación podrá verse:
-Imagen de la Interfase dentro de VS Code
-
-
-
-
-
+* Se utilizó Pandas Profile Report para efectuar un análisis más profundo del archivo.
+  Se realizó un histograma con Matplotlib y Seaborn para obtener una visión general de distribución de los datos del dataframe.
 
 

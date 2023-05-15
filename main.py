@@ -9,7 +9,6 @@ from typing import Dict
 app = FastAPI()
 
 class peliculas_pais(BaseModel):
-    '''pais:str'''
     cantidad:int
     title:str
     
@@ -23,7 +22,7 @@ df['release_date'] = pd.to_datetime(df['release_date'], format='%Y-%m-%d')
 
 @app.get('/')
 def index():
-    return 'Bienvenidos'
+    return 'Bienvenidos al Proyecto fastAPI'
 
 
 
@@ -45,7 +44,7 @@ def peliculas_dia(dia:str):
 
 
 @app.get('/franquicia/{franquicia}')
-def franquicia_info(franquicia:str):
+def franquicia(franquicia:str):
     cantidad_peliculas = (df[df['belongs_to_collection'] == franquicia]).shape[0]
     df_presupuesto = (df[df['belongs_to_collection'] == franquicia])['budget']
     df_ingresos = (df[df['belongs_to_collection'] == franquicia])['revenue']
