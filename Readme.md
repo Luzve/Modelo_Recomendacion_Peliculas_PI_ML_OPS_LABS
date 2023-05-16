@@ -56,7 +56,7 @@ Crear 6 funciones que se consumirán en la API.
 
 * _def retorno(pelicula): '''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''' return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}_
 
-3. **[DEPLOYMENT](https://deploy-movies.onrender.com/docs)**
+3. **[DEPLOYMENT](https://deploy-luzoble.onrender.com/docs))**
 
 * Para el deployment se realizo en Render.
 
