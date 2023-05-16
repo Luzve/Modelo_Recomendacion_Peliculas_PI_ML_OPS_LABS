@@ -58,6 +58,8 @@ Crear 6 funciones que se consumirán en la API.
 
 3. **[DEPLOYMENT](https://deploy-movies.onrender.com/docs)**
 
+**[LINK VIDEO](https://drive.google.com/file/d/1p557WVVqSGGmW6qq9qzMBXncg2Gtx_6k/view?usp=sharing)**
+
 * Para el deployment se realizo en Render.
 
 
